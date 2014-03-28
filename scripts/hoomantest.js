@@ -13,8 +13,11 @@ var noBots = new hOOmanTest($(formID), {
                 "value": this.mover.name
             }));
 
-            // do something else like, enable the submit button. 
-        }
+			// set humanclient's value so we know page has been manually used. PLEASE NOTE that this is ONLY for
+			// client side validation convenience.
+			document.getElementById('humanclient').value = 'something';
+
+		}
         else // dropped it elsewhere, tease / lead them. 
             this.instructions.set("html", "No, no, no! Drag and drop the <strong>"+this.mover.name+"</strong> into the BOX!");
     }
